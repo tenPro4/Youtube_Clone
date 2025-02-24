@@ -10,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: Npm@1 # Show Assistant: Npm
+- task: Npm@1
   inputs:
     command: 'install'
 - task: Npm@1
@@ -18,7 +18,7 @@ steps:
     command: 'custom'
     customCommand: 'run build'
     
-- task: PublishBuildArtifacts@1  # Show Assistant: Publish build artifacts
+- task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: 'build'
     ArtifactName: 'drop'
